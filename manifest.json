@@ -1,0 +1,20 @@
+{
+  "name": "Github Email Viewer",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "View all email adresses on a github profile page",
+  "homepage_url": "https://github.com/nobe4/gev",
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "*://api.github.com/users/*"
+  ],
+  "content_scripts": [
+    {
+      "run_at" :  "document_end" ,
+      "matches": [ "*://github.com/*" ],
+      "js": [ "src/content.js" ]
+    }
+  ]
+}
